@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Atkinson Hyperlegible Mono", sans-serif;
+    color: white;
+}
+body{
+    margin: 50px;
+    background-color: #282C33;
+}
+.nav{
+    margin: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+span{
+    color:aqua;
+}
+.line{
+    width: 50%;
+    background-color: aqua;
+    height: 2px;
+    margin:50px 0;
+    padding: 0 !important;
+}
+.line-full{
+    width: 100%;
+    background-color: aqua;
+    height: 2px;
+    margin:50px 0;
+    padding: 0 !important;
+}
+.white-line{
+    width: 80%;
+    background-color: white;
+    height: 2px;
+    margin:50px 0;
+    position: relative;
+    left: 190px;
+    padding: 0 !important;
+}
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+    gap:200px;
+    height:50vh;
+}
+header > .left{
+    width: 25vw;
+}
+.socials{
+    margin:10px;
+    padding:5px;
+}
+.socials img{
+    margin-right: 70px;
+    cursor:pointer;
+}
+
+h1{
+    font-weight: bolder;
+    font-size: 5em;
+    
+}
+
+.text{
+    font-size: 2em;
+}
+.text div{
+    padding: 10px;
+}
+
+.project{
+    margin-top: 50px;
+    gap:200px;
+    background-color: #1a1c20;
+    padding: 10px;
+}
+.project h1{
+    text-align: center;
+}
+.project-container{
+    margin: 50px;
+    background-color: #000000;
+    width: 86%;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    padding:50px;
+}
+.project-container .left h2{
+    font-size: 50px;
+    text-align: right;
+}
+.project-container .left{
+    text-align: right;
+}
