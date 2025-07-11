@@ -15,6 +15,9 @@ body{
     display: flex;
     justify-content: space-evenly;
 }
+a{
+    text-decoration: none;
+}
 
 span{
     color:aqua;
@@ -75,19 +78,19 @@ h1{
     padding: 10px;
 }
 
-.project{
+.project,.skills,.about{
     margin-top: 50px;
     gap:200px;
     background-color: #1a1c20;
-    padding: 10px;
+    padding: 50px 10px 10px 10px;
 }
-.project h1{
+.project h1,.skills h1,.about h1{
     text-align: center;
 }
 .project-container{
     margin: 50px;
     background-color: #000000;
-    width: 86%;
+    width: 70%;
     height: 300px;
     display: flex;
     justify-content: space-between;
@@ -100,3 +103,94 @@ h1{
 .project-container .left{
     text-align: right;
 }
+.skills-container{
+    margin: 50px;
+    width: 86%;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+.skills-container .right{
+    display: flex;
+    align-items: center;
+
+}
+.skills-container .right div{
+    margin: 20px;
+}
+.container{
+    border:2px aquamarine solid;
+    padding:10px;
+}
+.container div{
+    margin:3px;
+}
+.about-container{
+    margin: 50px;
+    width: 86%;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    align-items: center;
+}
+.about-container .right div{
+    font-size: 20px;
+    text-align: right;
+}
+.terminal-button {
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    background-color: black;
+    border-radius: 10px;
+    z-index: 100;
+    bottom: 50px;
+    right: 5px;
+    box-shadow: 0 5px 5px 1px black;
+    cursor: pointer;
+}
+.terminal {
+    width: 35vw;
+    height: 50vh;
+    background-color: rgba(0, 43, 53, 0.9);
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    z-index: 999;
+    box-shadow: 0 10px 10px 5px black;
+    border:10px #000000 solid;
+    padding: 10px;
+}
+.hidden{
+    display: none;
+}
+.terminal .close{
+    width:50px;
+    height:50px;
+    position: absolute;
+    top:-5px;
+    right:0;
+    cursor: pointer;
+}
+.area{
+    margin-top:10px;
+    text-decoration: none;
+    appearance: none;
+    resize:none;
+    width: 35vw;
+    height: 1vh;
+    font-family: "Atkinson Hyperlegible Mono";
+    padding:5px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+.output {
+    min-height: 200px;
+    margin-bottom: 8px;
+    white-space: pre-wrap;
+    overflow-y: auto;
+}
+
