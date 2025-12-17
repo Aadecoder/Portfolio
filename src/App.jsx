@@ -17,11 +17,11 @@ const App = () => {
 
 
     const dockItems = [
-      { icon: <VscHome size={18} />, label: 'Home', onClick: () => {navigate('/Portfolio/'); setPath("Home"); setTerminal(false)}},
-      { icon: <VscAccount size={18} />, label: 'About Me', onClick: () => {navigate('/Portfolio/about-me'); setPath("About Me"); setTerminal(false)} },
-      { icon: <VscCode size={18} />, label: 'Projects', onClick: () => {navigate('/Portfolio/projects') ; setPath("Projects"); setTerminal(false)} },
-      { icon: <VscChecklist size={18} />, label: 'Skills', onClick: () => {navigate('/Portfolio/skills') ; setPath("Skills"); setTerminal(false)} },
-      { icon: <VscTerminal size={18} />, label: 'Terminal', onClick: () => {navigate('/Portfolio/terminal'); setTerminal(true)} },
+      { icon: <VscHome size={18} />, label: 'Home', onClick: () => {navigate('/'); setPath("Home"); setTerminal(false)}},
+      { icon: <VscAccount size={18} />, label: 'About Me', onClick: () => {navigate('/about-me'); setPath("About Me"); setTerminal(false)} },
+      { icon: <VscCode size={18} />, label: 'Projects', onClick: () => {navigate('/projects') ; setPath("Projects"); setTerminal(false)} },
+      { icon: <VscChecklist size={18} />, label: 'Skills', onClick: () => {navigate('/skills') ; setPath("Skills"); setTerminal(false)} },
+      { icon: <VscTerminal size={18} />, label: 'Terminal', onClick: () => {navigate('/terminal'); setTerminal(true)} },
     ];
 
   return (
@@ -52,10 +52,10 @@ const App = () => {
 
       <Navbar path={path} />
       <Routes>
-        <Route path='/Portfolio/' element={<Homepage />}></Route>
-        <Route path='/Portfolio/skills' element={<Skills />}></Route>
-        <Route path='/Portfolio/projects' element={<Projects />}></Route>
-        <Route path='/Portfolio/about-me' element={<AboutMe />}></Route>
+        <Route path='/' element={<Homepage />}></Route>
+        <Route path='/skills' element={<Skills />}></Route>
+        <Route path='/projects' element={<Projects />}></Route>
+        <Route path='/about-me' element={<AboutMe />}></Route>
       </Routes>
     </div>
         <Dock 
