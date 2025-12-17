@@ -27,7 +27,7 @@ const App = () => {
   return (
     <div className='overflow-scroll h-lvh w-lvw'>
       <Routes>
-        <Route path='/Portfolio/terminal' element={<Terminal />}></Route>
+        <Route path='/terminal' element={<Terminal />}></Route>
       </Routes>
     <div className={`relative ${isTerminal ? "h-0 w-0" : "h-lvh w-lvw"} overflow-hidden p-4`}>
       <div className='absolute top-0 left-0 h-full w-full z-0'>
