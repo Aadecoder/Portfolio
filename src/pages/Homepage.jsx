@@ -2,6 +2,8 @@ import React from 'react'
 import { VscGithubInverted, VscMail, VscTwitter } from "react-icons/vsc";
 import {PiXLogoBold} from "react-icons/pi"
 import { BsLinkedin } from "react-icons/bs";
+import { TypeAnimation } from 'react-type-animation';
+
 
 const Homepage = () => {
 
@@ -17,14 +19,29 @@ const Homepage = () => {
               <a href='https://www.linkedin.com/in/aditya-rajput-70372930a/' target='_blank'><BsLinkedin className='size-12 hover:cursor-pointer' /></a>
             </div>
         </div>
+        <div>
+        <span className='text-6xl'>I am a</span>
         <div className=''>
-          <span className='text-7xl'>
+            <TypeAnimation
+              sequence={[
+                // Same substring at the start will only be typed out once, initially
+                'FullStack Developer',
+                1500, 
+                'Embedded Software Engineer',
+                1500,
+              ]}
+              wrapper='span' 
+              speed={50}
+              style={{fontSize:'3.75rem'}}
+              repeat={Infinity}
+            /></div>
+          {/* <span className='text-7xl'>
             FullStack <br/>
             Web Developer
             <br/>
             & <br/>
             Embedded Systems Enthusiast 
-          </span>
+          </span> */}
         </div>
     </div>
   )

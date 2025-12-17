@@ -41,7 +41,7 @@ const ProjectCarousel = ({ projects = [], autoPlay = false, autoPlayInterval = 6
               <div className="flex flex-col justify-between">
                 <div>
                   <h3 className="text-5xl text-cyan-400 font-semibold">{p.title}</h3>
-                  <p className="mt-2 text-md text-gray-600 dark:text-gray-300">{p.description}</p>
+                  <p className="mt-2 text-md text-gray-600 dark:text-gray-300 whitespace-pre-line">{p.description}</p>
                 </div>
                 <div className="mt-4 flex items-center gap-3 hover:cursor-pointer">
                   <a
@@ -52,7 +52,7 @@ const ProjectCarousel = ({ projects = [], autoPlay = false, autoPlayInterval = 6
                     className="text-gray-700 dark:text-gray-200 hover:text-black dark:hover:text-white flex items-center gap-2"
                   >
                     <GitHubIcon className="w-6 h-6" />
-                    <span className="text-sm">View on GitHub</span>
+                    <span className="text-sm">Check out the repo on GitHub</span>
                   </a>
                 </div>
               </div>

@@ -84,6 +84,12 @@ export default function Dock({
   dockHeight = 256,
   baseItemSize = 50
 }) {
+
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const close = () => setModalOpen(false);
+  const open = () => setModalOpen(true);
+
   const mouseX = useMotionValue(Infinity);
   const isHovered = useMotionValue(0);
 

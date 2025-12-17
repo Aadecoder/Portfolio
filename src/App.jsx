@@ -4,7 +4,8 @@ import Skills from "./pages/Skills.jsx";
 import Projects from './pages/Projects.jsx';
 import AboutMe from './pages/AboutMe.jsx';
 import Navbar from './components/Navbar.jsx';
-import {Routes, Route, useNavigate, useParams} from 'react-router';
+import Terminal from './pages/Terminal.jsx';
+import {Routes, Route, useNavigate} from 'react-router';
 import LiquidEther from './pages/LiquidEther.jsx';
 import Dock from './components/Dock.jsx';
 import {VscHome, VscAccount, VscTerminal, VscChecklist, VscCode } from "react-icons/vsc";
@@ -12,19 +13,23 @@ import {VscHome, VscAccount, VscTerminal, VscChecklist, VscCode } from "react-ic
 const App = () => {
     const navigate = useNavigate()
     const [path, setPath] = useState("Home")
+    const [isTerminal, setTerminal] = useState(false);
 
-    console.log(path);
 
     const dockItems = [
-      { icon: <VscHome size={18} />, label: 'Home', onClick: () => {navigate('/'); setPath("Home")}},
-      { icon: <VscAccount size={18} />, label: 'About Me', onClick: () => {navigate('/about-me'); setPath("About Me")} },
-      { icon: <VscCode size={18} />, label: 'Projects', onClick: () => {navigate('/projects') ; setPath("Projects")} },
-      { icon: <VscChecklist size={18} />, label: 'Skills', onClick: () => {navigate('/skills') ; setPath("Skills")} },
-      { icon: <VscTerminal size={18} />, label: 'Terminal', onClick: () => {alert('Terminal!') ; setPath("Terminal")}},
-  ];
+      { icon: <VscHome size={18} />, label: 'Home', onClick: () => {navigate('/Portfolio/'); setPath("Home"); setTerminal(false)}},
+      { icon: <VscAccount size={18} />, label: 'About Me', onClick: () => {navigate('/Portfolio/about-me'); setPath("About Me"); setTerminal(false)} },
+      { icon: <VscCode size={18} />, label: 'Projects', onClick: () => {navigate('/Portfolio/projects') ; setPath("Projects"); setTerminal(false)} },
+      { icon: <VscChecklist size={18} />, label: 'Skills', onClick: () => {navigate('/Portfolio/skills') ; setPath("Skills"); setTerminal(false)} },
+      { icon: <VscTerminal size={18} />, label: 'Terminal', onClick: () => {navigate('/Portfolio/terminal'); setTerminal(true)} },
+    ];
 
   return (
-    <div className='relative h-lvh w-lvw overflow-hidden p-4'>
+    <div className='overflow-hidden h-lvh w-lvw overscroll-none'>
+      <Routes>
+        <Route path='/Portfolio/terminal' element={<Terminal />}></Route>
+      </Routes>
+    <div className={`relative ${isTerminal ? "h-0 w-0" : "h-lvh w-lvw"} overflow-hidden p-4`}>
       <div className='absolute top-0 left-0 h-full w-full z-0'>
         <LiquidEther
           colors={[ '#5227FF', '#FF9FFC', '#B19EEF' ]}
@@ -44,13 +49,15 @@ const App = () => {
           autoRampDuration={0.6}
         />
       </div>
+
       <Navbar path={path} />
       <Routes>
-        <Route path='/' element={<Homepage />}></Route>
-        <Route path='/skills' element={<Skills />}></Route>
-        <Route path='/projects' element={<Projects />}></Route>
-        <Route path='/about-me' element={<AboutMe />}></Route>
+        <Route path='/Portfolio/' element={<Homepage />}></Route>
+        <Route path='/Portfolio/skills' element={<Skills />}></Route>
+        <Route path='/Portfolio/projects' element={<Projects />}></Route>
+        <Route path='/Portfolio/about-me' element={<AboutMe />}></Route>
       </Routes>
+    </div>
         <Dock 
           items={dockItems}
           panelHeight={68}
