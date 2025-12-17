@@ -25,7 +25,7 @@ const App = () => {
     ];
 
   return (
-    <div className='overflow-hidden h-lvh w-lvw overscroll-none'>
+    <div className='overflow-scroll h-lvh w-lvw'>
       <Routes>
         <Route path='/Portfolio/terminal' element={<Terminal />}></Route>
       </Routes>
