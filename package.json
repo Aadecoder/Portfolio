@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "homepage": "https://Aadecoder.github.io/Portfolio",
+  "homepage": "https://Aadecoder.github.io/portfolio",
   "private": true,
   "description": "Terminal-style portfolio for Aditya Dinesh Rajput",
   "type": "module",
