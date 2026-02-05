@@ -1,13 +1,13 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "homepage": "https://Aadecoder.github.io/Portfolio"
+  "homepage": "https://Aadecoder.github.io/Portfolio",
   "private": true,
   "description": "Terminal-style portfolio for Aditya Dinesh Rajput",
   "type": "module",
   "scripts": {
-    "predeploy": "npm run build"
-    "deploy": "gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
