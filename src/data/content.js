@@ -63,17 +63,17 @@ export const experiences = [
 
 export const blogPosts = [
   {
-    title: 'Chess Advisor: gluing YOLO with Stockfish',
-    slug: 'chess-advisor-yolo',
-    summary: 'Detect pieces with YOLO, plan moves with Stockfish, and keep the UX lean.',
-    file: './blogs/chess-advisor-yolo.md',
+    title: 'Bare Metal in Arduino',
+    slug: 'bare-metal-arduino',
+    summary: 'blinky hard mode',
+    file: './blogs/bare-metal-arduino.md',
   }
 ]
 
 export const contact = [
   { label: 'Email', value: 'adityandr8274@gmail.com', href: 'mailto:adityandr8274@gmail.com' },
   { label: 'GitHub', value: 'Aadecoder', href: 'https://github.com/Aadecoder' },
-  { label: 'LinkedIn', value: 'aditya-rajput-70372930a', href: 'www.linkedin.com/in/aditya-rajput-70372930a' },
+  { label: 'LinkedIn', value: 'aditya-rajput-70372930a', href: 'https://www.linkedin.com/in/aditya-rajput-70372930a' },
   { label: 'X (Twitter)', value: 'aadi_rajputr', href: 'https://x.com/aadi_rajputr' },
   { label: 'Instagram', value: 'aaditya_rajputr', href: 'https://instagram.com/aaditya_rajputr' },
 ]
